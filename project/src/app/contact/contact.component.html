@@ -1,1 +1,70 @@
-<p>contact works!</p>
+
+<section class="bg-light p-5 rounded-3">
+  <!-- Start of the form section -->
+  <div class="container">
+    <div class="row g-5">
+      <!-- Column for the form description -->
+      <div class="collg-5">
+        <h2>Contact us</h2>
+      </div>
+      <!-- Column for the form itself -->
+      <div class="col-lg-7">
+        <!-- Form container -->
+        <div class="container">
+          <!-- Row for form elements -->
+          <div class="row g-3">
+            <!-- Column for name input -->
+            <div class="col-6">
+              <label for="">Name</label>
+              <input
+                #txtName
+                class="form-control"
+                type="text"
+                placeholder="Enter your name"
+              />
+            </div>
+            <!-- Column for email input -->
+            <div class="col-6">
+              <label for="">Email</label>
+              <input
+                #txtEmail
+                class="form-control"
+                type="email"
+                placeholder="Enter your email"
+              />
+            </div>
+            <!-- Description textarea -->
+            <div class="col-12 mb-4">
+              <label for="">Description</label>
+              <textarea
+                #txtDescription
+                class="form-control"
+                type="text"
+                placeholder="Enter the Description"
+              ></textarea>
+            </div>
+            <!-- Submit button -->
+            <div class="col-12">
+              <button class="btn btn-primary" (click)="sendForm()">
+                Click to send
+              </button>
+            </div>
+            <!-- Display submitted values -->
+            <div class="col-12 mt-4" *ngIf="isSubmited">
+              <div class="alert alert-success">
+                <ul>
+                  <!-- Show submitted name -->
+                  <li>{{ name }}</li>
+                  <!-- Show submitted email -->
+                  <li>{{ email }}</li>
+                  <!-- Show submitted description -->
+                  <li>{{ description }}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
