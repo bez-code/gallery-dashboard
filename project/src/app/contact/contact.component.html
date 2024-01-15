@@ -1,17 +1,11 @@
-
 <section class="bg-light p-5 rounded-3">
-  <!-- Start of the form section -->
   <div class="container">
     <div class="row g-5">
-      <!-- Column for the form description -->
       <div class="collg-5">
         <h2>Contact us</h2>
       </div>
-      <!-- Column for the form itself -->
       <div class="col-lg-7">
-        <!-- Form container -->
         <div class="container">
-          <!-- Row for form elements -->
           <div class="row g-3">
             <!-- Column for name input -->
             <div class="col-6">
@@ -45,9 +39,17 @@
             </div>
             <!-- Submit button -->
             <div class="col-12">
-              <button class="btn btn-primary" (click)="sendForm()">
+              <button
+                class="btn btn-primary"
+                (click)="sendForm()"
+                *ngIf="!isCallingApi; else loading"
+              >
                 Click to send
               </button>
+              <ng-template #loading>
+                <div class="spinner-border" role="status">
+                </div>
+              </ng-template>
             </div>
             <!-- Display submitted values -->
             <div class="col-12 mt-4" *ngIf="isSubmited">

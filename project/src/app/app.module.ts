@@ -8,12 +8,9 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { MainComponent } from './main/main.component';
 import { NavComponent } from './nav/nav.component';
+import { HttpClientModule } from '@angular/common/http';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatIconModule} from '@angular/material/icon';
-import {MatInputModule} from '@angular/material/input';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
 
 @NgModule({
   declarations: [
@@ -27,12 +24,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatFormFieldModule,
+    HttpClientModule,
+    MatSnackBarModule,
     BrowserAnimationsModule,
-    MatInputModule,
-    MatIconModule,
-    FormsModule,
-    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
