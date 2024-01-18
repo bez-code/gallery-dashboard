@@ -1,5 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { ContactService } from 'src/services/contact.service';
+import { ContactService } from '../services/contact.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
