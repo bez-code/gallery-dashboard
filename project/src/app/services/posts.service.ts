@@ -14,4 +14,6 @@ export class PostsService {
 
   getPosts() : Observable<PostsInterface[]> {
     return this.http.get<PostsInterface[]>(this.api);
-  }}
+  }
+
+}

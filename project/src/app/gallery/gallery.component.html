@@ -1,1 +1,9 @@
-<p>gallery works!</p>
+<div>
+    <h1>Photos</h1>
+    <div *ngFor="let photo of photos | async" class="posts mb-2 p-2">
+        <h2>{{photo.id}}</h2>
+        <h3>{{photo.title}}</h3>
+        <!-- <img [src]="photo.url" alt=""> -->
+        <div>{{ photo.id }}</div>
+    </div>
+</div>

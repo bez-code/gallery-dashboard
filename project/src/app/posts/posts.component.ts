@@ -24,7 +24,6 @@ export class PostsComponent implements OnInit {
   getPosts() {
     this.service.getPosts().subscribe(posts => {
       this.posts = posts;
-      console.log(this.posts);
     });
   }
 }
